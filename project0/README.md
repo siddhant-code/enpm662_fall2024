@@ -1,9 +1,9 @@
 
 Project 0:
 
-The package provided here is intended to handle two scenarios based in user input:
+The package provided here is intended to handle two scenarios based on user input:
 
-Scenario 1: Turtle bot is expected to move user defined distance with constant velocity
+Scenario 1: Turtle bot is expected to move user defined distance with constant velocity.
 
 Scenario 2: Turtlebot is expected to move user defined distance start from rest, accelerating till a peak velocity, continue at peak velocity and decelerate to rest.
 
