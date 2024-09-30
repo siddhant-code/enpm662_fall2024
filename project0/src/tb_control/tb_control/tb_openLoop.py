@@ -48,14 +48,14 @@ class VelocityPublisher(Node):
                 new_velocity = round(
                     self.current_velocity - ACCELERATION * TIME_STEP, 2
                 )
-                self.current_velocity = max(0.0, new_velocity)
+                self.current_velocity = max(0.0, new_velocity) #If calulated new velocity goes negative, we will chose 0 as velocity as we dont want robot to move backward. Otherwise use calculated velocity.
 
             else:  # condition to check when to accelerate
                 # accelerate
                 new_velocity = round(
                     self.current_velocity + ACCELERATION * TIME_STEP, 2
                 )
-                self.current_velocity = min(new_velocity, MAX_VELOCITY)
+                self.current_velocity = min(new_velocity, MAX_VELOCITY) #If calulated new velocity goes above max velocity, we will chose max velocity as velocity as we cant go faster than max velocity.Otherwise use calculated velocity.
 
             # maintain contsant velocity and count distance traveled
             self.distance_covered = round(
