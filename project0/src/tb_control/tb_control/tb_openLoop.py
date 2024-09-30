@@ -62,13 +62,13 @@ class VelocityPublisher(Node):
                 self.distance_covered + self.current_velocity * TIME_STEP, 2
             )
 
-        self.publish_velocity(self.current_velocity)
+        self.publish_velocity(self.current_velocity)  #Publishing the velocity
 
 
 def main(args=None):
-    rclpy.init(args=args)
-    publish = VelocityPublisher()
-    rclpy.spin(publish)
+    rclpy.init(args=args)           #Initializing
+    publish = VelocityPublisher()   #Creating instance of node
+    rclpy.spin(publish)             # Running the node
 
 
 if __name__ == "__main__":
